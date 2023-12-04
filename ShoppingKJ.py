@@ -6,12 +6,12 @@ class Shopping:
         self.foodAmount = foodAmount
         # Sets the standard price of food per pound
         self.standardPrice = 0
-        self.__PriceList()
+        self.__PriceListKJ()
         # Sets the total price 
-        self.totalPrice = self.calculatePrice()
+        self.totalPrice = self.calculatePriceKJ()
 
     #Returns the price of the specified food per pound
-    def  __PriceList(self):
+    def  __PriceListKJ(self):
         if self.foodName == "Dry Cured Iberian Ham":
             self.standardPrice = 177.80
         elif self.foodName == "Wagyu Steaks":
@@ -32,7 +32,7 @@ class Shopping:
             self.standardPrice = 0.00
     
     #Calculates the total price
-    def calculatePrice(self):
+    def calculatePriceKJ(self):
         return self.foodAmount * self.standardPrice
 
     def __str__(self):
